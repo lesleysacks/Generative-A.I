@@ -22,14 +22,35 @@
 </nav>
 </header>
 
-<section class="content">
-<h2>Completed Projects</h2>
-<div class="project-grid">
-<img src="images/machine_1.jpg" alt="Project 1">
-<img src="images/machine_2.jpg" alt="Project 2">
-<img src="images/machine_3.jpg" alt="Conveyor System">
-</div>
-</section>
+<section class="content projects">
+    <div class="projects-header">
+        <h2>Completed Projects</h2>
+        <p class="projects-intro">These automation installations are live and delivering results. There are still more projects coming very soon — subscribe for early notice and be first in line.</p>
+    </div>
+
+    <div class="project-marquee-wrapper">
+        <div class="project-marquee" id="project-marquee">
+            <div class="marquee-item"><img src="images/machine_1.jpg" alt="Project Machine 1"></div>
+            <div class="marquee-item"><img src="images/machine_2.jpg" alt="Project Machine 2"></div>
+            <div class="marquee-item"><img src="images/machine_3.jpg" alt="Project Machine 3"></div>
+            <div class="marquee-item"><img src="images/machine_4.jpg" alt="Project Machine 4"></div>
+            <div class="marquee-item"><img src="images/machine_5.jpg" alt="Project Machine 5"></div>
+            <div class="marquee-item"><img src="images/machine_6.jpg" alt="Project Machine 6"></div>
+        </div>
+    </div>
+
+    <div class="subscribe-panel">
+        <div>
+            <h3>Get early access to new projects</h3>
+            <p>Subscribe to our newsletter for first notice on upcoming automation builds, case studies, and launch updates.</p>
+        </div>
+        <form id="subscribe-form" class="subscribe-form">
+            <input type="email" id="subscribe-email" placeholder="Enter your email" required>
+            <button type="submit">Notify Me</button>
+        </form>
+        <p id="subscribe-message" class="subscribe-message"></p>
+    </div>
+</section>    
 
 <footer>
 <p>© 2026 Generative A.I Industrial Automation</p>
@@ -37,7 +58,47 @@
 
 <a href="https://wa.me/27843252262" class="whatsapp">WhatsApp Us</a>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const marquee = document.getElementById('project-marquee');
+        if (marquee) {
+            marquee.innerHTML += marquee.innerHTML;
+            let position = 0;
+            const speed = 0.18;
+            const totalWidth = marquee.scrollWidth / 2;
+
+            function animateMarquee() {
+                position -= speed;
+                if (Math.abs(position) >= totalWidth) {
+                    position = 0;
+                }
+                marquee.style.transform = `translateX(${position}px)`;
+                requestAnimationFrame(animateMarquee);
+            }
+
+            requestAnimationFrame(animateMarquee);
+        }
+
+        const subscribeForm = document.getElementById('subscribe-form');
+        const subscribeMessage = document.getElementById('subscribe-message');
+        if (subscribeForm) {
+            subscribeForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('subscribe-email').value.trim();
+                if (!email) {
+                    subscribeMessage.textContent = 'Please enter a valid email address.';
+                    subscribeMessage.style.color = '#fda4af';
+                    return;
+                }
+
+                subscribeMessage.textContent = 'Thanks! You’ll receive early notice on our next projects.';
+                subscribeMessage.style.color = '#86efac';
+                subscribeForm.reset();
+            });
+        }
+    });
+</script>
 
 </body>
 </html>

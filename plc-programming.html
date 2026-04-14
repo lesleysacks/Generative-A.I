@@ -4,6 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PLC Programming | Generative A.I</title>
+<style>
+    .page-hero {
+        position: relative;
+        perspective: 1000px;
+    }
+    
+    .page-hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: inherit;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.8s ease;
+        z-index: 1;
+    }
+    
+    .page-hero:hover::before {
+        transform: scale(1.1);
+        filter: brightness(1.2);
+    }
+    
+    .page-hero .overlay {
+        position: relative;
+        z-index: 2;
+    }
+</style>
+
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,16 +50,16 @@
 </nav>
 </header>
 
-<section class="page-hero" style="background-image:url('images/machine_5.jpg');">
+<section class="page-hero" style="background-image:url('images/PLC_image_Winmo.jpg');">
 <div class="overlay">
-<h2>PLC Programming Services</h2>
+
 </div>
 </section>
 
 <section class="content">
 <h3>Our PLC Services Include:</h3>
 <ul>
-<li>Custom PLC programming for Siemens, Allen Bradley, and more</li>
+<li>Custom PLC programming for Winmo, Siemens, Allen Bradley, and more</li>
 <li>System troubleshooting and upgrades</li>
 <li>Control panel integration</li>
 <li>Sensor and actuator interfacing</li>
@@ -47,7 +75,7 @@
 
 <a href="https://wa.me/27843252262" class="whatsapp">WhatsApp Us</a>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
