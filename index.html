@@ -32,7 +32,7 @@
 
     <main class="glass-container">
         <section class="hero">
-            <video autoplay muted loop playsinline class="hero-video">
+            <video autoplay muted loop playsinline preload="metadata" class="hero-video">
                 <source src="video/factory_loop.mp4" type="video/mp4">
             </video>
             <div class="hero-overlay" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true"
@@ -97,8 +97,7 @@
                         <span class="dot green"></span>
                         <div class="url-bar" id="tool-url-bar">https://safeops-sa-production.up.railway.app/</div>
                     </div>
-                    <iframe id="tool-frame" src="https://safeops-sa-production.up.railway.app/" frameborder="0"
-                        allowfullscreen></iframe>
+                    <iframe id="tool-frame" src="https://safeops-sa-production.up.railway.app/" frameborder="0" loading="lazy" allowfullscreen></iframe>
             </section>
 
         <section class="projects">
@@ -107,13 +106,13 @@
             </div>
             <div class="project-grid">
                 <div class="project-img-wrapper" data-tilt data-tilt-scale="1.05">
-                    <img src="images/machine_1.jpg" alt="Project 1">
+                    <img src="images/machine_1.jpg" alt="Project 1" loading="lazy">
                 </div>
                 <div class="project-img-wrapper" data-tilt data-tilt-scale="1.05">
-                    <img src="images/machine_2.jpg" alt="Project 2">
+                    <img src="images/machine_2.jpg" alt="Project 2" loading="lazy">
                 </div>
                 <div class="project-img-wrapper" data-tilt data-tilt-scale="1.05">
-                    <img src="images/machine_3.jpg" alt="Conveyor System">
+                    <img src="images/machine_3.jpg" alt="Conveyor System" loading="lazy">
                 </div>
             </div>
         </section>

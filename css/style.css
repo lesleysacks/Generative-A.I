@@ -6,6 +6,12 @@ body {
     overflow-x: hidden;
 }
 
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 #bg-canvas {
     position: fixed;
     top: 0;
@@ -382,6 +388,106 @@ body {
 
     .subscribe-form {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 24px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 16px;
+        justify-content: center;
+    }
+
+    .hero, .page-hero {
+        min-height: 50vh;
+        padding: 40px 20px;
+    }
+
+    .hero-overlay {
+        padding: 24px;
+        max-width: 95%;
+    }
+
+    .cta {
+        padding: 14px 30px;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+    }
+
+    .services, .industries, .projects, .tools-section {
+        padding: 60px 24px;
+    }
+
+    .tools-container {
+        flex-direction: column;
+    }
+
+    .tools-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        padding-bottom: 20px;
+    }
+
+    .tools-viewer {
+        min-height: 360px;
+    }
+
+    .whatsapp {
+        right: 16px;
+        bottom: 16px;
+        padding: 14px 18px;
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar ul {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .navbar a {
+        padding: 8px 0;
+        font-size: 14px;
+    }
+
+    .hero-overlay h2 {
+        font-size: 26px;
+    }
+
+    .hero-overlay p {
+        font-size: 16px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .marquee-item {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .subscribe-panel {
+        padding: 30px 20px;
+    }
+
+    .subscribe-form input,
+    .subscribe-form button {
+        width: 100%;
+    }
+
+    footer {
+        padding: 30px 20px;
     }
 }
 
